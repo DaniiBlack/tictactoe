@@ -6,4 +6,19 @@ body {
     width: 150px;
     height: 150px;
     border: 1px solid black;
+    float: left;
 }
+
+.row {
+    clear: both;
+}
+/* clear gets rid of the floating- each cell inside a row to float, then reset  */
+
+.X {
+    background-color: skyblue;
+}
+
+.O {
+    background-color: rgb(196, 66, 66);
+}
+
