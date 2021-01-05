@@ -8,7 +8,7 @@ const cells = document.getElementsByClassName("cell")
 console.log(cells.a1)
 
 const state = ["", "", "", "", "", "",  "", "", ""]
-const won = [
+const win = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -18,6 +18,19 @@ const won = [
     [0, 4, 8],
     [2, 4, 6],
 ]
+const won = () => {
+    for (let i = 0; i < win.length; i++) {
+        const winCondition = win[i];
+        const condition0 = state[winCondition[0]]
+        const condition1 = state[winCondition[1]]
+        const condition2 = state[winCondition[2]]
+        // console.log(state, winCondition);
+        console.log(state[winCondition[0]], state[winCondition[1]], state[winCondition[2]])
+        if(condition0 === "X" && condition1 === "X" && condition2 === "X") {
+            console.log("Player2 wins");
+        }
+    }
+}
 const cellClicked = (event) => {
     console.log("Hello", event.target.id)
     const cellId = event.target.id
@@ -38,6 +51,7 @@ const cellClicked = (event) => {
         document.getElementById(cellId).setAttribute("class","cell O");
     }
     console.log(state)
+    won()
 }
 
 for (let i=0; i < cells.length; i++){
@@ -61,8 +75,3 @@ for (let i=0; i < cells.length; i++){
 // Check:
 // Valid move - is box empty or taken
 //     is game over? - has someone already won? Is there a draw?
-
-    
-
-
-
