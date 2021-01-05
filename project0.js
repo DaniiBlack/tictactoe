@@ -8,6 +8,16 @@ const cells = document.getElementsByClassName("cell")
 console.log(cells.a1)
 
 const state = ["", "", "", "", "", "",  "", "", ""]
+const won = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+]
 const cellClicked = (event) => {
     console.log("Hello", event.target.id)
     const cellId = event.target.id
@@ -35,7 +45,8 @@ for (let i=0; i < cells.length; i++){
 }
 
 
-// Any of these combinations is a win: array of arrays. store and check your rules. 
+// Any of these combinations is a win: array of arrays.
+// store and check your rules. 
 // 0, 1, 2 break it up smaller 
 // 3, 4, 5
 // 6, 7, 8

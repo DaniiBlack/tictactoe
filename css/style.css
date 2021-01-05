@@ -15,10 +15,10 @@ body {
 /* clear gets rid of the floating- each cell inside a row to float, then reset  */
 
 .X {
-    background-color: skyblue;
+    background-color: aquamarine;
 }
 
 .O {
-    background-color: rgb(196, 66, 66);
+    background-color: rgb(185, 66, 185);
 }
 
