@@ -3,9 +3,9 @@ const player2 = "Player2";
 let turn = player1;
 
 const player = document.getElementById("player")
-console.log(player)
+// console.log(player)
 const cells = document.getElementsByClassName("cell") 
-console.log(cells.a1)
+// console.log(cells.a1)
 
 const state = ["", "", "", "", "", "",  "", "", ""]
 const win = [
@@ -18,24 +18,34 @@ const win = [
     [0, 4, 8],
     [2, 4, 6],
 ]
+let gameOver = false;
+
 const won = () => {
     for (let i = 0; i < win.length; i++) {
         const winCondition = win[i];
         const condition0 = state[winCondition[0]]
         const condition1 = state[winCondition[1]]
         const condition2 = state[winCondition[2]]
+        console.log("------");
+        console.log("index:", i, "winCondition", winCondition);
+        console.log("condition0", condition0, "condition1", condition1, "condition2", condition2);
         // console.log(state, winCondition);
-        console.log(state[winCondition[0]], state[winCondition[1]], state[winCondition[2]])
         if(condition0 === "X" && condition1 === "X" && condition2 === "X") {
+            gameOver = true;
             console.log("Player2 wins");
+        } 
+        if(condition0 === "O" && condition1 === "O" && condition2 === "O") {
+            gameOver = true;
+            console.log("Player1 wins");
         }
     }
 }
 const cellClicked = (event) => {
-    console.log("Hello", event.target.id)
     const cellId = event.target.id
     const index = event.target.getAttribute("data-index")
-    console.log(index)
+    if(gameOver===true) {
+        return;
+    }
     if(state[index] !== "") {
         return;
     } 
