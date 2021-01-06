@@ -11,7 +11,7 @@ New line to begin a second paragraph
 
 # Project0
 
-## MArkdown Examples 
+## Markdown Examples 
 
 ### Lists (should be simple and easy) 
 Asterix
