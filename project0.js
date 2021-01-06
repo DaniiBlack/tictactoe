@@ -40,6 +40,22 @@ const won = () => {
         }
     }
 }
+const draw = () => {
+    if (gameOver === true) {
+        return;
+    }
+    let movesRemaining = false;
+    for(let i = 0; i < state.length; i++) {
+        if (state[i] === "") {
+            movesRemaining = true;
+        }
+    }
+    if (movesRemaining === false) {
+        gameOver = true;
+        console.log("draw");
+    }
+}
+
 const cellClicked = (event) => {
     const cellId = event.target.id
     const index = event.target.getAttribute("data-index")
@@ -62,6 +78,7 @@ const cellClicked = (event) => {
     }
     console.log(state)
     won()
+    draw()
 }
 
 for (let i=0; i < cells.length; i++){
@@ -71,17 +88,7 @@ for (let i=0; i < cells.length; i++){
 
 // Any of these combinations is a win: array of arrays.
 // store and check your rules. 
-// 0, 1, 2 break it up smaller 
-// 3, 4, 5
-// 6, 7, 8
-// 0, 3, 6
-// 1, 4, 7
-// 2, 5, 8
-// 0, 4, 8
-// 2, 4, 6
-
-// Any of these is a draw:
+// 0, 1, 2 break it up smaller
 
 // Check:
 // Valid move - is box empty or taken
-//     is game over? - has someone already won? Is there a draw?
