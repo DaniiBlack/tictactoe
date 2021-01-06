@@ -51,4 +51,7 @@ This is a link to [the W3C] (http://w3.org/).
 for (let i - 0; i < 10; 1++) {
     console.log( i );
 }
-```
+``` (triple ``` is used for multiple lines of code.)
+
+I think there is a typo in the `weindow` variable. 
+Debugging can be performed using `console.log()`.
