@@ -42,6 +42,7 @@ ___Remaining pieces___
 3. The page could be much more pleasing to look at 
 4. The screen does not yet render who won 
 5. Adding resources and illustrations to README.md
+6. Build an API so a player can compete against the computer 
 
 ## Thank you for visiting us here in the wonderful world of Git. 
 ***even if you ended up here by accident***
