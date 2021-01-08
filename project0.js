@@ -2,9 +2,9 @@ const player1 = "Player1"; //Bubble
 const player2 = "Player2"; //Bubble
 let turn = player1; // Automates the first turn as Player1 
 let winner; //Bubble 
-const player = document.getElementById( "player" ) // This joins HTML "player" element to JS via DOM
-const cells = document.getElementsByClassName( "cell" ) // ^^ Joins HTML "cell"s element - any element in the HTML file with class "cell"
-const state = ["", "", "", "", "", "",  "", "", ""] // This array allows us to store data in the cells, which we can then access to check what the state of the game is at each step 
+const player = document.getElementById( "player" ); // This joins HTML "player" element to JS via DOM
+const cells = document.getElementsByClassName( "cell" ); // ^^ Joins HTML "cell"s element - any element in the HTML file with class "cell"
+const state = ["", "", "", "", "", "",  "", "", ""]; // This array allows us to store data in the cells, which we can then access to check what the state of the game is at each step 
 const win = [
     [0, 1, 2],
     [3, 4, 5],
@@ -14,15 +14,15 @@ const win = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-] // This Array inside an array is a list of all possible win sequences 
+]; // This Array inside an array is a list of all possible win sequences 
 let gameOver = false; //gameOver is set to false, until the code checks the state to determine if there has been a winner (Below, "checkingForDraw, checkingForWinner etc")
 
 const checkingForWinner = () => {
     for ( let i = 0; i < win.length; i++ ) {
         const winCondition = win[i];
-        const condition0 = state[ winCondition[0] ]
-        const condition1 = state[ winCondition[1] ]
-        const condition2 = state[ winCondition[2] ] //Checking through the index, top to bottom, left to right. Wrote this way in order to keep the if statement code short as possible 
+        const condition0 = state[ winCondition[0] ];
+        const condition1 = state[ winCondition[1] ];
+        const condition2 = state[ winCondition[2] ]; //Checking through the index, top to bottom, left to right. Wrote this way in order to keep the if statement code short as possible 
         if( condition0 === "X" && condition1 === "X" && condition2 === "X" ) {
             gameOver = true;
             winner = player1;
@@ -47,7 +47,7 @@ const checkingForDraw = () => {
     if ( movesRemaining === false ) {
         gameOver = true;
     } // Ifno empty cells left = draw = end the game
-} // This function checks through each cell and player moves to determine whether or not there has been a draw. If so, the game ends. If not the game continues. 
+}; // This function checks through each cell and player moves to determine whether or not there has been a draw. If so, the game ends. If not the game continues. 
 
 const render = () => {
     if ( turn === player1 ) {
@@ -62,11 +62,11 @@ const render = () => {
     } else if ( gameOver === true ) {
         player.innerHTML = "DRAW.. Rematch? >:-)";
     }
-} // The function updates the html after every click. Check the turn and winner bubbles in order to update display as needed. 
+}; // The function updates the html after every click. Check the turn and winner bubbles in order to update display as needed. 
 
 const cellClicked = (event) => { // This function gets called every time a player clicks on a cell 
-    const cellId = event.target.id // Gets the cell that was clicked from the event 
-    const index = event.target.getAttribute( "data-index" ) // We need the data index to connect to the state array and update it
+    const cellId = event.target.id; // Gets the cell that was clicked from the event 
+    const index = event.target.getAttribute( "data-index" ); // We need the data index to connect to the state array and update it
     if( gameOver === true ) {
         return;
     } // ending early as game is already over 
@@ -88,8 +88,8 @@ const cellClicked = (event) => { // This function gets called every time a playe
 }
 
 for ( let i=0; i < cells.length; i++ ) {
-    cells[i].addEventListener( "click", cellClicked )
-} // cells is link html to the js, this is where we go through each cell and link the cellClicked function to the click event 
+    cells[i].addEventListener( "click", cellClicked );
+}; // cells is link html to the js, this is where we go through each cell and link the cellClicked function to the click event 
 
 // break it up smaller
 // Check:
