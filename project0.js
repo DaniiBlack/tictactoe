@@ -15,14 +15,14 @@ const win = [
     [0, 4, 8],
     [2, 4, 6],
 ]
-let gameOver = false;
+let gameOver = false; //gameOver is set to false, until the code checks the state to determine if there has been a winner (Below, "checkingForDraw, checkingForWinner etc")
 
 const checkingForWinner = () => {
     for ( let i = 0; i < win.length; i++ ) {
         const winCondition = win[i];
         const condition0 = state[ winCondition[0] ]
         const condition1 = state[ winCondition[1] ]
-        const condition2 = state[ winCondition[2] ]
+        const condition2 = state[ winCondition[2] ] //Checking through the index, top to bottom, left to right. Wrote this way in order to keep the if statement code short as possible 
         if( condition0 === "X" && condition1 === "X" && condition2 === "X" ) {
             gameOver = true;
             winner = player1;
@@ -48,6 +48,21 @@ const checkingForDraw = () => {
     }
 }
 
+const render = () => {
+    if ( turn === player1 ) {
+        player.innerHTML = "Turn: Player1";
+    } else {
+        player.innerHTML = "Turn: Player2";
+    }
+    if ( winner === player1 ) {
+        player.innerHTML = "Player1 Wins";
+    } else if ( winner === player2 ) {
+        player.innerHTML = "Player2 Wins";
+    } else if ( gameOver === true ) {
+        player.innerHTML = "DRAW.. Rematch? >:-)";
+    }
+}
+
 const cellClicked = (event) => {
     const cellId = event.target.id
     const index = event.target.getAttribute( "data-index" )
@@ -67,27 +82,12 @@ const cellClicked = (event) => {
         document.getElementById(cellId).setAttribute("class","cell O");
     }
     checkingForWinner();
-    CheckingForDraw();
+    checkingForDraw();
     render();
 }
 
 for ( let i=0; i < cells.length; i++ ) {
     cells[i].addEventListener( "click", cellClicked )
-}
-
-const render = () => {
-    if ( turn === player1 ) {
-        player.innerHTML = "Turn: Player1";
-    } else {
-        player.innerHTML = "Turn: Player2";
-    }
-    if ( winner === player1 ) {
-        player.innerHTML = "Player1 Wins";
-    } else if ( winner === player2 ) {
-        player.innerHTML = "Player2 Wins";
-    } else if ( gameOver === true ) {
-        player.innerHTML = "DRAW.. Rematch? >:-)";
-    }
 }
 
 // break it up smaller
