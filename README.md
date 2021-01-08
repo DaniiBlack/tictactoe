@@ -31,5 +31,6 @@ ___Remaining pieces___
 4. The screen does not yet render who won 
 
 ## Thank you for visiting us here in the wonderful world of Git. 
+***even if you ended up here by accident***
 
 ![Even if you ended up here by accident](https://media.giphy.com/media/t0VhbXmHET4qY/giphy.gif)
