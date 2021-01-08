@@ -7,7 +7,7 @@ Please follow this link [Dani's TIC-TAC-TOE](https://daniiblack.github.io/projec
 **Don't overthink it:** 
 - Two player game, you must play from the same webpage on the same device. 
 - Consider playing a quick round of **paperScissorsRock**, whoever wins gets to start
-- Remember to ensure the looser has to do some unfavourable chores. Keep the stakes high for maximum enjoyment. 
+- Remember to ensure the loser has to do some unfavourable chores. Keep the stakes high for maximum enjoyment. 
 
 ### The approach? Read on: 
 #### The secret to being a **kick-ass** babyCoder, is accepting the fact that sometimes your code is just a collage of hacks and tips picked up whilst stumbling along the good way. 
