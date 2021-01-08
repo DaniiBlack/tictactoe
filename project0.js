@@ -1,5 +1,5 @@
-const player1 = "Player1"; //Bubble
-const player2 = "Player2"; //Bubble
+const player1 = "The Six Fingered Man"; //Bubble
+const player2 = "Inigo Montoya"; //Bubble
 let turn = player1; // Auto-sets first turn as Player1 
 let winner; //Bubble 
 const player = document.getElementById( "player" ); // Joins HTML "player" element to JS via DOM
@@ -51,16 +51,16 @@ const checkingForDraw = () => {
 
 const render = () => {
     if ( turn === player1 ) {
-        player.innerHTML = "Turn: Player1";
+        player.innerHTML = "The Six Fingered Man, your turn";
     } else {
-        player.innerHTML = "Turn: Player2";
+        player.innerHTML = "Inigo Montoya, go!";
     }
     if ( winner === player1 ) {
-        player.innerHTML = "Player1 Wins";
+        player.innerHTML = "WINNER: The Six Fingered Man";
     } else if ( winner === player2 ) {
-        player.innerHTML = "Player2 Wins";
+        player.innerHTML = "WINNER: Inigo Montoya";
     } else if ( gameOver === true ) {
-        player.innerHTML = "DRAW.. Rematch? >:-)";
+        player.innerHTML = "DRAW.. Rematch.. >=)?";
     }
 }; // The function updates the html after every click. Check the turn and winner bubbles in order to update display as needed. 
 

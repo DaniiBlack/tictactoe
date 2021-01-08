@@ -1,6 +1,6 @@
 body {
-    font-family: "Roboto", sans-serif;
-    background-color: whitesmoke;
+    font-family: 'Merriweather', serif;
+    background-color: white;
 }
 
 .container {
@@ -21,7 +21,7 @@ body {
 /* clear gets rid of the floating- each cell inside a row to float, then reset  */
 
 .X {
-    background-color: aquamarine;
+    background-color: rgb(106, 252, 203);
 }
 
 .O {
@@ -33,12 +33,13 @@ body {
 }
 
 .rematch {
-    background-color: rgb(245, 177, 51);
+    background-color: rgb(248, 203, 24);
     border: none;
     padding: 15px 32px;
     text-align: center;
     font-size: 20px;
     border-radius: 8px;
+    font-family: 'Merriweather', serif;
 }
 
 
