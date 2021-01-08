@@ -17,7 +17,7 @@ ___The Challenges:___
 3. I put CSS off to last, and ran out of time to make the game as pretty as it deserves to be 
 4. The main bug I came across was that the Player rendered (player1 or 2) broke and I had to mess about with the order of the functions to fix. 
 
-![Bill Murray looking thoughtful] (http://www.fillmurray.com/450/400)
+![Bill Murray looking thoughtful](http://www.fillmurray.com/450/400)
 
 ___The Highlights___
 1. I loved piecing the HTML and JS together
@@ -32,4 +32,4 @@ ___Remaining pieces___
 
 ## Thank you for visiting us here in the wonderful world of Git. 
 
-![Even you ended up here by accident] (https://giphy.com/gifs/t0VhbXmHET4qY/html5) " width="300">
+![Even you ended up here by accident](https://giphy.com/gifs/t0VhbXmHET4qY/html5)
