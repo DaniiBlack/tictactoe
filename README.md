@@ -29,3 +29,7 @@ ___Remaining pieces___
 2. I would like to allow players to select their own avatar 
 3. The page could be much more pleasing to look at 
 4. The screen does not yet render who won 
+
+## Thank you for visiting us here in the wonderful world of Git. 
+
+![Even you ended up here by accident] (https://giphy.com/gifs/t0VhbXmHET4qY/html5) " width="300">
