@@ -1,9 +1,9 @@
-const player1 = "Player1";
-const player2 = "Player2"; 
+const player1 = "Player1"; //Bubble
+const player2 = "Player2"; //Bubble
 let turn = player1; // Automates the first turn as Player1 
-let winner;
-const player = document.getElementById( "player" ) 
-const cells = document.getElementsByClassName( "cell" )
+let winner; //Bubble 
+const player = document.getElementById( "player" ) // This joins HTML "player" element to JS via DOM
+const cells = document.getElementsByClassName( "cell" ) // ^^ Joins HTML "cell"s element - any element in the HTML file with class "cell"
 const state = ["", "", "", "", "", "",  "", "", ""] // This array allows us to store data in the cells, which we can then access to check what the state of the game is at each step 
 const win = [
     [0, 1, 2],
@@ -32,20 +32,21 @@ const checkingForWinner = () => {
             winner = player2;
         }
     }
-} // This game goes through the moves and cells to determine whether the game has been won, by checking the moves against the possible win sequences listed in the above array 
+} // This function goes through the moves and cells to determine whether the game has been won, by checking the moves against the possible win sequences listed in the above array 
+
 const checkingForDraw = () => {
     if ( gameOver === true ) {
         return;
-    }
+    } // Ends function if game is already over
     let movesRemaining = false;
     for( let i = 0; i < state.length; i++ ) {
         if ( state[i] === "" ) {
             movesRemaining = true;
         }
-    }
+    } // Checking if there are any empty cells left 
     if ( movesRemaining === false ) {
         gameOver = true;
-    }
+    } // Ifno empty cells left = draw = end the game
 } // This function checks through each cell and player moves to determine whether or not there has been a draw. If so, the game ends. If not the game continues. 
 
 const render = () => {
@@ -61,34 +62,34 @@ const render = () => {
     } else if ( gameOver === true ) {
         player.innerHTML = "DRAW.. Rematch? >:-)";
     }
-} // The function updates the html after every click 
+} // The function updates the html after every click. Check the turn and winner bubbles in order to update display as needed. 
 
-const cellClicked = (event) => {
-    const cellId = event.target.id
-    const index = event.target.getAttribute( "data-index" )
+const cellClicked = (event) => { // This function gets called every time a player clicks on a cell 
+    const cellId = event.target.id // Gets the cell that was clicked from the event 
+    const index = event.target.getAttribute( "data-index" ) // We need the data index to connect to the state array and update it
     if( gameOver === true ) {
         return;
-    }
+    } // ending early as game is already over 
     if(state[index] !== "") {
         return;
-    } 
+    } // If the cell is not empty, the function ends early as there is already an X or O in the cell (invalid move)
     if ( turn === player1 ) {
-        turn = player2;
-        state[index] ="X";
-        document.getElementById( cellId ).setAttribute( "class","cell X" );
+        turn = player2; // Switching players turn 
+        state[index] ="X"; //storing move in the cell clicked (in state array)
+        document.getElementById( cellId ).setAttribute( "class","cell X" ); //Update cell colour
     } else {
         turn = player1;
-        state[index] ="O";
-        document.getElementById(cellId).setAttribute("class","cell O");
+        state[index] ="O"; //storing move in the cell clicked (in state array)
+        document.getElementById(cellId).setAttribute( "class","cell O" ); // Update cell colour 
     }
-    checkingForWinner();
-    checkingForDraw();
-    render();
+    checkingForWinner(); //After each click - is a winner? 
+    checkingForDraw(); // Is a draw?
+    render(); // Update screen 
 }
 
 for ( let i=0; i < cells.length; i++ ) {
     cells[i].addEventListener( "click", cellClicked )
-}
+} // cells is link html to the js, this is where we go through each cell and link the cellClicked function to the click event 
 
 // break it up smaller
 // Check:
