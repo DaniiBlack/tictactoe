@@ -10,7 +10,19 @@ Please follow this link [Dani's TIC-TAC-TOE](https://daniiblack.github.io/projec
 - Remember to ensure the looser has to do some unfavourable chores. Keep the stakes high for maximum enjoyment. 
 
 ### The approach? Read on: 
-#### The secret to being a kick-ass babyCoder, is accepting the fact that sometimes your code is just a collage of hacks and tips picked up whilst stumbling along the good way. 
+#### The secret to being a **kick-ass** babyCoder, is accepting the fact that sometimes your code is just a collage of hacks and tips picked up whilst stumbling along the good way. 
+___Technology used___
+- Macbook Pro
+- Dell Monitor 
+- LogiTech MX Master mouse 
+- Apple keyboard 
+1. HTML 
+2. Javascript 
+3. DOM manipulation 
+4. Markdown 
+4. Some sprinkles of CSS 
+5. Git and GitHub 
+
 ___The Challenges:___
 1. Getting the styling to resize so that the game could be played on a phone (without using Bootstrap)
 2. Refining the logic in the javascript in order to try and keep the code short and succinct 
@@ -29,6 +41,7 @@ ___Remaining pieces___
 2. I would like to allow players to select their own avatar 
 3. The page could be much more pleasing to look at 
 4. The screen does not yet render who won 
+5. Adding resources and illustrations to README.md
 
 ## Thank you for visiting us here in the wonderful world of Git. 
 ***even if you ended up here by accident***
