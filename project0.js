@@ -1,10 +1,10 @@
 const player1 = "Player1"; //Bubble
 const player2 = "Player2"; //Bubble
-let turn = player1; // Automates the first turn as Player1 
+let turn = player1; // Auto-sets first turn as Player1 
 let winner; //Bubble 
-const player = document.getElementById( "player" ); // This joins HTML "player" element to JS via DOM
-const cells = document.getElementsByClassName( "cell" ); // ^^ Joins HTML "cell"s element - any element in the HTML file with class "cell"
-const state = ["", "", "", "", "", "",  "", "", ""]; // This array allows us to store data in the cells, which we can then access to check what the state of the game is at each step 
+const player = document.getElementById( "player" ); // Joins HTML "player" element to JS via DOM
+const cells = document.getElementsByClassName( "cell" ); // ^^ Joins all HTML "cell" elements to JS via DOM
+const state = ["", "", "", "", "", "",  "", "", ""]; // Allows data storage in the cells, allowing access to check what the state of the game is at each turn
 const win = [
     [0, 1, 2],
     [3, 4, 5],
@@ -14,15 +14,15 @@ const win = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-]; // This Array inside an array is a list of all possible win sequences 
-let gameOver = false; //gameOver is set to false, until the code checks the state to determine if there has been a winner (Below, "checkingForDraw, checkingForWinner etc")
+]; // List of all possible win sequences 
+let gameOver = false; //gameOver is set to false, until the state changes to have a draw or winner (Below functions, "checkingForDraw, checkingForWinner etc")
 
 const checkingForWinner = () => {
     for ( let i = 0; i < win.length; i++ ) {
         const winCondition = win[i];
         const condition0 = state[ winCondition[0] ];
         const condition1 = state[ winCondition[1] ];
-        const condition2 = state[ winCondition[2] ]; //Checking through the index, top to bottom, left to right. Wrote this way in order to keep the if statement code short as possible 
+        const condition2 = state[ winCondition[2] ]; //Checking through the index, top to bottom, left to right. Wrote this way to keep the if statement code short-hand
         if( condition0 === "X" && condition1 === "X" && condition2 === "X" ) {
             gameOver = true;
             winner = player1;
@@ -32,7 +32,7 @@ const checkingForWinner = () => {
             winner = player2;
         }
     }
-} // This function goes through the moves and cells to determine whether the game has been won, by checking the moves against the possible win sequences listed in the above array 
+} // Runs through the moves made/ available and cells, to determine whether the game has been won. Checks the moves against the possible win sequences listed in array above 
 
 const checkingForDraw = () => {
     if ( gameOver === true ) {
