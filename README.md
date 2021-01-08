@@ -1,7 +1,7 @@
 # TIC TAC TOE - The Game. 
 
 ## INSTALLATION 
-Please follow this link [Dani's TIC-TAC-TOE](https://daniiblack.github.io/project0/).
+Please follow this link [Dani's TIC-TAC-TOE](https://daniiblack.github.io/project0/) to access the game.
 
 ### Open the webpage, grab your bestest imaginary friend, your mother; father; cousin.. anyone you feel needs *a good thrashing* and get started! 
 **Don't overthink it:** 
