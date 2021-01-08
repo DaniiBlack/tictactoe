@@ -1,10 +1,10 @@
 const player1 = "Player1";
-const player2 = "Player2";
-let turn = player1;
+const player2 = "Player2"; 
+let turn = player1; // Automates the first turn as Player1 
 let winner;
-const player = document.getElementById( "player" )
+const player = document.getElementById( "player" ) 
 const cells = document.getElementsByClassName( "cell" )
-const state = ["", "", "", "", "", "",  "", "", ""]
+const state = ["", "", "", "", "", "",  "", "", ""] // This array allows us to store data in the cells, which we can then access to check what the state of the game is at each step 
 const win = [
     [0, 1, 2],
     [3, 4, 5],
@@ -14,7 +14,7 @@ const win = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-]
+] // This Array inside an array is a list of all possible win sequences 
 let gameOver = false; //gameOver is set to false, until the code checks the state to determine if there has been a winner (Below, "checkingForDraw, checkingForWinner etc")
 
 const checkingForWinner = () => {
@@ -32,7 +32,7 @@ const checkingForWinner = () => {
             winner = player2;
         }
     }
-}
+} // This game goes through the moves and cells to determine whether the game has been won, by checking the moves against the possible win sequences listed in the above array 
 const checkingForDraw = () => {
     if ( gameOver === true ) {
         return;
@@ -46,7 +46,7 @@ const checkingForDraw = () => {
     if ( movesRemaining === false ) {
         gameOver = true;
     }
-}
+} // This function checks through each cell and player moves to determine whether or not there has been a draw. If so, the game ends. If not the game continues. 
 
 const render = () => {
     if ( turn === player1 ) {
@@ -61,7 +61,7 @@ const render = () => {
     } else if ( gameOver === true ) {
         player.innerHTML = "DRAW.. Rematch? >:-)";
     }
-}
+} // The function updates the html after every click 
 
 const cellClicked = (event) => {
     const cellId = event.target.id
