@@ -32,4 +32,4 @@ ___Remaining pieces___
 
 ## Thank you for visiting us here in the wonderful world of Git. 
 
-![Even you ended up here by accident](https://giphy.com/gifs/t0VhbXmHET4qY/html5)
+![Even if you ended up here by accident](https://media.giphy.com/media/t0VhbXmHET4qY/giphy.gif)
