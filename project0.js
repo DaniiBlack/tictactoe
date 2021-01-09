@@ -1,7 +1,7 @@
 const player1 = "The Six Fingered Man"; //Bubble
 const player2 = "Inigo Montoya"; //Bubble
 let turn = player1; // Auto-sets first turn as Player1 
-let winner; //Bubble 
+let winner = null; //Bubble 
 const player = document.getElementById( "player" ); // Joins HTML "player" element to JS via DOM
 const cells = document.getElementsByClassName( "cell" ); // ^^ Joins all HTML "cell" elements to JS via DOM
 const state = ["", "", "", "", "", "",  "", "", ""]; // Allows data storage in the cells, allowing access to check what the state of the game is at each turn
@@ -76,20 +76,31 @@ const cellClicked = (event) => { // This function gets called every time a playe
     if ( turn === player1 ) {
         turn = player2; // Switching players turn 
         state[index] ="X"; //storing move in the cell clicked (in state array)
-        document.getElementById( cellId ).setAttribute( "class","cell X" ); //Update cell colour
+        document.getElementById( cellId ).setAttribute( "class", "cell X" ); //Update cell colour
     } else {
         turn = player1;
         state[index] ="O"; //storing move in the cell clicked (in state array)
-        document.getElementById(cellId).setAttribute( "class","cell O" ); // Update cell colour 
+        document.getElementById(cellId).setAttribute( "class", "cell O" ); // Update cell colour 
     }
     checkingForWinner(); //After each click - is a winner? 
     checkingForDraw(); // Is a draw?
     render(); // Update screen 
 }
 
-for ( let i=0; i < cells.length; i++ ) {
+for ( let i = 0; i < cells.length; i++ ) {
     cells[i].addEventListener( "click", cellClicked );
 }; // cells is link html to the js, this is where we go through each cell and link the cellClicked function to the click event 
 
-// break it up smaller
-// Check:
+const rematchButton = document.getElementById("rematch");
+
+const reset = () => {
+    winner = null;
+    gameOver = false;
+    turn = player1;
+    state = ["", "", "", "", "", "",  "", "", ""];
+    render();
+    for ( let i = 0; i < cells.length; i++ ) {
+        cells[i].setAttribute( "class", "cell" );
+    };
+};
+rematchButton.addEventListener( "click", reset);
