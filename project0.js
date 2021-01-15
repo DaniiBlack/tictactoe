@@ -4,7 +4,7 @@ let turn = player1; // Auto-sets first turn as Player1
 let winner = null; //Bubble 
 const player = document.getElementById( "player" ); // Joins HTML "player" element to JS via DOM
 const cells = document.getElementsByClassName( "cell" ); // ^^ Joins all HTML "cell" elements to JS via DOM
-const state = ["", "", "", "", "", "",  "", "", ""]; // Allows data storage in the cells, allowing access to check what the state of the game is at each turn
+let state = ["", "", "", "", "", "",  "", "", ""]; // Allows data storage in the cells, allowing access to check what the state of the game is at each turn
 const win = [
     [0, 1, 2],
     [3, 4, 5],
