@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-<body>
-    <h1 class="title">Tic Tac Toe</h1>
-    <h2 id="player">Player1... You get a head start</h2>
-    <div class="container">
-        <div class="row">
-            <div data-index="0" class="cell" id="a1"></div>
-            <div data-index="1" class="cell" id="a2"></div>
-            <div data-index="2" class="cell" id="a3"></div>
-        </div> 
-        <div class="row">
-            <div data-index="3"class="cell" id="b1"></div>
-            <div data-index="4" class="cell" id="b2"></div>
-            <div data-index="5" class="cell" id="b3"></div>
-        </div>
-        <div class="row">
-            <div data-index="6" class="cell" id="c1"></div>
-            <div data-index="7" class="cell" id="c2"></div>
-            <div data-index="8" class="cell" id="c3"></div>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <button id="rematch" class="rematch">Rematch</button>
-    <script src="project0.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Play Tic Tac Toe online with a friend.">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Tic Tac Toe</h1>
+            <h2 id="player">Player1... You get a head start</h2>
+        </header>
+        <main class="container">
+            <div class="row">
+                <div data-index="0" class="cell" id="a1" role="button" aria-label="Cell 1"></div>
+                <div data-index="1" class="cell" id="a2" role="button" aria-label="Cell 2"></div>
+                <div data-index="2" class="cell" id="a3" role="button" aria-label="Cell 3"></div>
+            </div> 
+            <div class="row">
+                <div data-index="3" class="cell" id="b1" role="button" aria-label="Cell 4"></div>
+                <div data-index="4" class="cell" id="b2" role="button" aria-label="Cell 5"></div>
+                <div data-index="5" class="cell" id="b3" role="button" aria-label="Cell 6"></div>
+            </div>
+            <div class="row">
+                <div data-index="6" class="cell" id="c1" role="button" aria-label="Cell 7"></div>
+                <div data-index="7" class="cell" id="c2" role="button" aria-label="Cell 8"></div>
+                <div data-index="8" class="cell" id="c3" role="button" aria-label="Cell 9"></div>
+            </div>
+        </main>
+        <footer>
+            <button id="rematch" class="rematch">Rematch</button>
+        </footer>
+    </body>
 </html>
