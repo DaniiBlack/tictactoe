@@ -1,5 +1,5 @@
-const player1 = "The Six Fingered Man"; //Bubble
-const player2 = "Inigo Montoya"; //Bubble
+const player1 = "Player1"; //Bubble
+const player2 = "Player2"; //Bubble
 let turn = player1; // Auto-sets first turn as Player1 
 let winner = null; //Bubble 
 const player = document.getElementById( "player" ); // Joins HTML "player" element to JS via DOM
@@ -51,14 +51,14 @@ const checkingForDraw = () => {
 
 const render = () => {
     if ( turn === player1 ) {
-        player.innerHTML = "The Six Fingered Man, your turn";
+        player.innerHTML = "Player1, your turn";
     } else {
-        player.innerHTML = "Inigo Montoya, go!";
+        player.innerHTML = "Player2, go!";
     }
     if ( winner === player1 ) {
-        player.innerHTML = "WINNER: The Six Fingered Man";
+        player.innerHTML = "WINNER: Player1";
     } else if ( winner === player2 ) {
-        player.innerHTML = "WINNER: Inigo Montoya";
+        player.innerHTML = "WINNER: Player2";
     } else if ( gameOver === true ) {
         player.innerHTML = "DRAW.. Rematch.. >=)?";
     }

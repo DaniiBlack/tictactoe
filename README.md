@@ -1,50 +1,48 @@
-# TIC TAC TOE - The Game. 
+# TIC TAC TOE - The Game
 
-## INSTALLATION 
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technology Used](#technology-used)
+- [Challenges](#challenges)
+- [Highlights](#highlights)
+- [Contribution](#contribution)
+- [License](#license)
+
+## Installation
 Please follow this link [Dani's TIC-TAC-TOE](https://daniiblack.github.io/project0/) to access the game.
 
-### Open the webpage, grab your bestest imaginary friend, your mother; father; cousin.. anyone you feel needs *a good thrashing* and get started! 
-**Don't overthink it:** 
-- Two player game, you must play from the same webpage on the same device. 
-- Consider playing a quick round of **paperScissorsRock**, whoever wins gets to start
-- Remember to ensure the loser has to do some unfavourable chores. Keep the stakes high for maximum enjoyment. 
+### Steps
+1. Open the webpage.
+2. Grab your bestest imaginary friend, your mother, father, cousin, or anyone you feel needs *a good thrashing* and get started!
 
-### The approach? Read on: 
-#### The secret to being a **kick-ass** babyCoder, is accepting the fact that sometimes your code is just a collage of hacks and tips picked up whilst stumbling along the good way. 
-___Technology used___
-- Macbook Pro
-- Dell Monitor 
-- LogiTech MX Master mouse 
-- Apple keyboard 
-1. HTML 
-2. Javascript 
-3. DOM manipulation 
-4. Markdown 
-4. Some sprinkles of CSS 
-5. Git and GitHub 
+**Don't overthink it:**
+- Two player game, you must play from the same webpage on the same device.
+- Consider playing a quick round of **paperScissorsRock**, whoever wins gets to start.
+- Remember to ensure the loser has to do some unfavorable chores. Keep the stakes high for maximum enjoyment.
 
-___The Challenges:___
-1. Getting the styling to resize so that the game could be played on a phone (without using Bootstrap)
-2. Refining the logic in the javascript in order to try and keep the code short and succinct 
-3. I put CSS off to last, and ran out of time to make the game as pretty as it deserves to be 
-4. The main bug I came across was that the Player rendered (player1 or 2) broke and I had to mess about with the order of the functions to fix. 
+## Usage
+1. Click on a cell to make your move.
+2. The game will alternate between Player 1 and Player 2.
+3. The first player to get three in a row wins.
+4. Click the "Rematch" button to start a new game.
 
+## Technology Used
+1. HTML
+2. JavaScript
+3. DOM manipulation
+4. Markdown
+5. Some sprinkles of CSS
+6. Git and GitHub
+
+## Challenges
+1. Getting the styling to resize so that the game could be played on a phone (without using Bootstrap).
+2. Refining the logic in the JavaScript in order to try and keep the code short and succinct.
+3. I put CSS off to last, and ran out of time to make the game as pretty as it deserves to be.
+4. The main bug I came across was that the Player rendered (player1 or 2) broke and I had to mess about with the order of the functions to fix.
+
+## Highlights
 ![Bill Murray looking thoughtful](http://www.fillmurray.com/450/400)
 
-___The Highlights___
-1. I loved piecing the HTML and JS together
-2. Using an array filled with empty strings in order to store data as the game is played was a satisfying solution 
-3. Using an array of arrays of winning move combinations was also fun 
-
-___Remaining pieces___
-1. The reset button does not yet work
-2. I would like to allow players to select their own avatar 
-3. The page could be much more pleasing to look at 
-4. The screen does not yet render who won 
-5. Adding resources and illustrations to README.md
-6. Build an API so a player can compete against the computer 
-
-## Thank you for visiting us here in the wonderful world of Git. 
-***even if you ended up here by accident***
-
-![Even if you ended up here by accident](https://media.giphy.com/media/t0VhbXmHET4qY/giphy.gif)
+## Contribution
+Feel free to fork this repository and submit pull requests. Any improvements or suggestions are welcome!
